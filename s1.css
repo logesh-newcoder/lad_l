@@ -1,14 +1,12 @@
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Dark background */
+    background-color: #121212; 
     color: white;
     margin: 0;
     padding: 0;
@@ -19,18 +17,16 @@ body {
     height: 100vh;
 }
 
-/* Form Styling */
 .form {
     background-color: #1e1e1e;
     border: 4px solid #333333;
-    width: 30%;
+    width: 50%;
     padding: 1.5rem;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     animation: glowingBox 3s infinite alternate;
 }
 
-/* Glowing Effect for Form */
 @keyframes glowingBox {
     0% {
         box-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61;
@@ -43,13 +39,12 @@ body {
     }
 }
 
-/* Label Styling */
 .form label {
     font-weight: bold;
     color: #ffffff;
     display: block;
     margin-bottom: 0.8rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 /* Position Radio Buttons Styling */
@@ -63,40 +58,37 @@ body {
 }
 
 .form .position label {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
 }
 
-/* Input Fields Styling */
 .form input[type="password"],
 .form input[type="submit"] {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 0.8rem;
     border: 1px solid #cccccc;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: 0.3s ease;
-    background: #2d2d2d; /* Darker input fields */
+    background: #2d2d2d; 
     color: white;
 }
 
-/* Glowing Effect for Input Fields on Focus */
 .form input[type="password"]:focus,
 .form input[type="submit"]:focus {
     border-color: #ff6f61;
     box-shadow: 0 0 10px #ff6f61;
 }
 
-/* Submit Button Styling */
 .form input[type="submit"] {
-    width: 80%; /* Set to 80% of the form width */
-    margin: 20px auto; /* Center align the button */
-    display: block; /* Ensure the button is block-level for centering */
+    width: 80%; 
+    margin: 20px auto; 
+    display: block; 
     padding: 12px;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     background-color: #007bff;
     color: white;
     font-weight: bold;
@@ -105,56 +97,77 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Submit Button Hover Effect */
 .form input[type="submit"]:hover {
     background-color: #0056b3;
     transform: scale(1.05);
     box-shadow: 0 0 15px #ff6f61, 0 0 30px #ff6f61;
 }
 
-/* Position Radio Buttons Animation */
 .form .position input[type="radio"] {
     transition: background-color 0.3s ease;
 }
 
-/* Responsive Design for Medium Screens */
 @media (min-width: 521px) and (max-width: 1250px) {
+    
     .form {
-        width: 40%;
-        padding: 1.2rem;
+        width: 70%;
+        padding: 1.3rem;
     }
-
+        
     .form label {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
-
+    
+    .form .position {
+        width: 90%;
+        margin: 0.7rem auto;
+    }
+    
     .form .position label {
         font-size: 1.5rem;
     }
-
+    
     .form input[type="password"],
     .form input[type="submit"] {
-        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+        font-size: 1.4rem;
     }
+        
+    .form input[type="submit"] {
+        font-size: 1.2rem;
+    }
+            
 }
 
 /* Responsive Design for Mobile View */
 @media (max-width: 520px) {
+
     .form {
-        width: 75%;
-        padding: 0.8rem;
+        width: 80%;
+        padding: 1rem;
     }
-
+        
     .form label {
-        font-size: 1.5rem;
-    }
-
-    .form .position label {
         font-size: 1rem;
     }
-
+    
+    .form .position {
+        width: 90%;
+        margin: 0.5rem auto;
+    }
+    
+    .form .position label {
+        font-size: 0.8rem;
+    }
+    
     .form input[type="password"],
     .form input[type="submit"] {
-        font-size: 1rem;
+        margin-bottom: 0.4rem;
+        font-size: 0.8rem;
     }
+        
+    .form input[type="submit"] {
+        font-size: 0.8rem;
+    }
+            
 }
