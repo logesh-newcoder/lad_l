@@ -1,0 +1,160 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Form Styling */
+.form {
+    background-color: #1e1e1e;
+    border: 4px solid #333333;
+    width: 30%;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    animation: glowingBox 3s infinite alternate;
+}
+
+/* Glowing Effect for Form */
+@keyframes glowingBox {
+    0% {
+        box-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61;
+    }
+    50% {
+        box-shadow: 0 0 20px #33ff57, 0 0 30px #33ff57;
+    }
+    100% {
+        box-shadow: 0 0 10px #3357ff, 0 0 20px #3357ff;
+    }
+}
+
+/* Label Styling */
+.form label {
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+}
+
+/* Position Radio Buttons Styling */
+.form .position {
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #bbbbbb;
+}
+
+.form .position label {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Input Fields Styling */
+.form input[type="password"],
+.form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+    background: #2d2d2d; /* Darker input fields */
+    color: white;
+}
+
+/* Glowing Effect for Input Fields on Focus */
+.form input[type="password"]:focus,
+.form input[type="submit"]:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 10px #ff6f61;
+}
+
+/* Submit Button Styling */
+.form input[type="submit"] {
+    width: 80%; /* Set to 80% of the form width */
+    margin: 20px auto; /* Center align the button */
+    display: block; /* Ensure the button is block-level for centering */
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Submit Button Hover Effect */
+.form input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff6f61, 0 0 30px #ff6f61;
+}
+
+/* Position Radio Buttons Animation */
+.form .position input[type="radio"] {
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Design for Medium Screens */
+@media (min-width: 521px) and (max-width: 1250px) {
+    .form {
+        width: 40%;
+        padding: 1.2rem;
+    }
+
+    .form label {
+        font-size: 1.8rem;
+    }
+
+    .form .position label {
+        font-size: 1.5rem;
+    }
+
+    .form input[type="password"],
+    .form input[type="submit"] {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 520px) {
+    .form {
+        width: 75%;
+        padding: 0.8rem;
+    }
+
+    .form label {
+        font-size: 1.5rem;
+    }
+
+    .form .position label {
+        font-size: 1rem;
+    }
+
+    .form input[type="password"],
+    .form input[type="submit"] {
+        font-size: 1rem;
+    }
+}
